@@ -38,39 +38,39 @@ export default function MainForm() {
 
   return (
     <Formik
-      initialValues={{ url: '' }}
+      initialValues={{ 'spotify-url': '' }}
       // onSubmit={ (value) => { getAlbumData(value.url) } }
       onSubmit={(values) => {
-        handleSubmit(values.url)
+        handleSubmit(values['spotify-url'])
       }}
     >
       {
         ({ errors, touched }) => (
-          <Form className="space-y-4">
+          <Form className="space-y-4 w-full">
             <div className="space-y-2">
-              <label className="tracking-wide font-bold" htmlFor="url">Spotify Album URL:</label>
+              <label className="tracking-wide font-bold text-gray-50" htmlFor="url">Spotify Album URL:</label>
               <Field
-                name="url"
-                className="w-full px-3 py-2 rounded-md focus:outline-none focus:ring focus:ring-indigo-500 focus:border-indigo-500 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-600 dark:focus:ring-indigo-400 dark:focus:border-indigo-400"
+                name="spotify-url"
+                className="w-full px-3 py-2 rounded-md focus:outline-none focus:ring focus:ring-violet-700 focus:border-violet-700 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-600 dark:focus:ring-indigo-400 dark:focus:border-indigo-400"
                 placeholder="https://open.spotify.com/album/..."
                 required
                 type="url"
                 validate={validateSpotifyAlbumURL}
               />
-              {errors.url && touched.url &&
+              {errors['spotify-url'] && touched['spotify-url'] &&
                 <div className="text-danger-500 flex flex-wrap gap-1 items-center rounded-md">
                   <GiInfo />
-                  <p>{errors.url}</p>
+                  <p>{errors['spotify-url']}</p>
                 </div>
               }
               {loading &&
                 <div className="flex items-center flex-wrap gap-1 justify-center">
-                  <p className="text-sm font-bold text-primary">Generating "cover art"...</p>
-                  <Spinner size="md" />
+                  <p className="text-sm font-bold text-secondary">Generating "cover art"...</p>
+                  <Spinner color="secondary" size="md" />
                 </div>
               }
             </div>
-            <Button color="primary" variant="shadow" className="w-full font-bold" type="submit">
+            <Button color="secondary" variant="shadow" className="w-full font-bold" type="submit">
               GENERATE "COVER ART"
             </Button>
           </Form>

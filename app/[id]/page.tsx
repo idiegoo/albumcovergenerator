@@ -2,7 +2,6 @@ import { getAlbumData } from "@/app/utils/getAlbumData";
 import Image from "next/image";
 import { Roboto_Mono } from "next/font/google";
 import AlbumPageButtons from "@/app/components/AlbumPageButtons";
-import { Button } from "@nextui-org/react";
 
 const robotoMono = Roboto_Mono({
   subsets: ['latin'],

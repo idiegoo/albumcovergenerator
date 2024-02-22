@@ -23,7 +23,7 @@ export interface Data {
 export const getAlbumData = cache(async (albumID: string) => {
   const sdk = SpotifyApi.withClientCredentials(client_id, client_secret);
   const items = await sdk.albums.get(albumID);
-  console.log(items);
+  //console.log(items);
 
   const artistNames = items.artists.map(artist => artist.name);
   const photoURL = items.images[0].url;
