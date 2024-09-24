@@ -12,10 +12,13 @@ const config: Config = {
     extend: {
       width: {
         a4: '210mm',
-     },
-     height: {
-       a4: '297mm',
-     },
+    },
+    height: {
+      a4: '297mm',
+    },
+    spacing: {
+      'calc-100-plus-12': 'calc(100% + 12px)',
+    },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
@@ -40,6 +43,19 @@ const config: Config = {
           900: '#A09B7D',
         },
       },
+    },
+    keyframes: {
+      animatedgradient: {
+        '0%': { backgroundPosition: '0% 50%' },
+        '50%': { backgroundPosition: '100% 50%' },
+        '100%': { backgroundPosition: '0% 50%' },
+      },
+    },
+    backgroundSize: {
+      '300%': '300%',
+    },
+    animation: {
+      gradient: 'animatedgradient 6s ease infinite alternate',
     },
   },
   darkMode: "class",

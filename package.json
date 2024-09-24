@@ -14,7 +14,6 @@
     "@spotify/web-api-ts-sdk": "^1.2.0",
     "extract-colors": "^4.0.2",
     "formik": "^2.4.5",
-    "framer-motion": "^10.16.16",
     "get-pixels": "^3.3.3",
     "html2canvas": "^1.4.1",
     "jspdf": "^2.5.1",

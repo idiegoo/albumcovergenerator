@@ -28,7 +28,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="https://github.com/nmz-z"
+                  href="https://github.com/idiegoo"
                   rel="noreferrer"
                   target="_blank"
                   className="text-indigo-300 transition hover:text-indigo-300/75"

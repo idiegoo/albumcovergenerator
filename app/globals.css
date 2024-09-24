@@ -2,4 +2,32 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  [type="color"].appearance-none::-webkit-color-swatch,
+  [type="color"].appearance-none::-moz-color-swatch {
+    -webkit-appearance: none !important;
+  }
+  ::-webkit-color-swatch-wrapper {
+    padding: 0 !important;
+  }
+}
+
+.animate-gradient {
+  background-size: 300%;
+  -webkit-animation: animatedgradient 6s ease infinite alternate;
+  -moz-animation: animatedgradient 6s ease infinite alternate;
+  animation: animatedgradient 6s ease infinite alternate;
+}
+
+@keyframes animatedgradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
 

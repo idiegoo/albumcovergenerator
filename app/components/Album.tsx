@@ -26,7 +26,7 @@ export default function Album({ albumData, longAlbum }: { albumData: Data; longA
     textColor: searchParams.get('textColor')
   } as UserPreferences
 
-  console.log(userPreferences)
+  //console.log(userPreferences)
   return (
     <main className="flex flex-col items-center justify-center min-h-screen bg-zinc-900 pb-6 w-a4 md:w-full">{/* A4 size DEFAULT*/}
     <AlbumPageButtons albumName={albumData.albumName} />

@@ -12,7 +12,7 @@ const roboto = Roboto({
 })
 
 export const metadata: Metadata = {
-  title: 'Album cover generator',
+  title: 'Coverit',
   description: 'A simple album poster generator',
 }
 
